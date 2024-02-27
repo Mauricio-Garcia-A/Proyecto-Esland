@@ -1,15 +1,18 @@
-# Astro Starter Kit: Basics
+# Web de Prueba ESLAND
+Aplicacion web con fines de aprendisaje de tecnologias web. Copia mejorada de la web de los premios ESLAND
 
+> 🧑‍🚀 **Tecnologias Web** utilizadas:
+ASTRO:
 ```sh
 npm create astro@latest -- --template basics
 ```
 
 
-> 🧑‍🚀 **Dependecias** Delete this file. Have fun!
+> 🧑‍🚀 **Dependecias** Utilizadas:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## 🚀 Project Structure
+
+## 🚀 Estructura del Proyecto
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -33,7 +36,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## 🧞 Comandos
 
 All commands are run from the root of the project, from a terminal:
 
