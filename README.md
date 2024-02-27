@@ -10,8 +10,14 @@ npm create astro@latest -- --template basics
 
 > 🧑‍🚀 **Dependecias** Utilizadas:
 
-
-
+- Tailwind CSS
+```sh
+npx astro add tailwind
+```
+- Tailwindcss Animated
+```sh
+ npm install -D tailwindcss-animated
+```
 ## 🚀 Estructura del Proyecto
 
 Inside of your Astro project, you'll see the following folders and files:
