@@ -18,6 +18,12 @@ npx astro add tailwind
 ```sh
  npm install -D tailwindcss-animated
 ```
+- Fuente texto: ONEST
+```sh
+ npm install @fontsource-variable/onest
+```
+
+
 ## 🚀 Estructura del Proyecto
 
 Inside of your Astro project, you'll see the following folders and files:
