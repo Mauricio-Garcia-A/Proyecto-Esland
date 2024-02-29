@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Video from '../components/Video.astro';
 import Intro from '../components/Intro.astro';
-import Bento from '../components/Bento.astro';
+import Bento from '../components/bentoGrid/Bento.astro';
 import PreFooter from '../components/PreFooter.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -12,7 +12,7 @@ import Footer from '../components/Footer.astro';
   description='Pagina de Prueba Premios ESLAND'
 >
   <Video />
-	<main>
+	<main class="flex flex-col justify-center items-center" >
 		<Intro />
 		<Bento />
     <PreFooter />
