@@ -22,7 +22,10 @@ npx astro add tailwind
 ```sh
  npm install @fontsource-variable/onest
 ```
-
+- Web Component: Lite-youtube (optimiza el rendimiento de los video en comparacion de los <frame>)
+```sh
+ npm i @justinribeiro/lite-youtube
+```
 
 ## 🚀 Estructura del Proyecto
 
