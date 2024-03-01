@@ -1,5 +1,9 @@
 ---
 import Logo from "./Logo.astro"
+
+import {getI18N} from '../i18n/'
+const { currentLocale } = Astro
+const i18n = getI18N({currentLocale})
 ---
 
 <footer class="bg-black/40">
@@ -72,7 +76,7 @@ import Logo from "./Logo.astro"
       <div class="flex sm:flex-row sm:items-start sm:justify-around sm:gap-20 sm:py-0 sm:text-left flex-col items-center gap-10 py-10 text-center">
         <div>
           <h2 class="mb-6 text-sm font-semibold uppercase text-white">
-            LEGAL
+            {i18n.FOOTER.LEGAL.TITLE}
           </h2>
           <ul class="flex flex-col gap-2 font-medium text-gray-400">
             <li>
@@ -80,7 +84,7 @@ import Logo from "./Logo.astro"
                 href="#"
                 class="hover:underline hover:text-primary duration-300"
               >
-                Aviso legal
+              {i18n.FOOTER.LEGAL.NOTICE}
               </a>
             </li>
             <li>
@@ -88,7 +92,15 @@ import Logo from "./Logo.astro"
                 href="#"
                 class="hover:underline hover:text-primary duration-300"
               >
-                Privacidad
+              {i18n.FOOTER.LEGAL.PRIVACY}
+              </a>
+            </li> 
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-primary duration-300"
+              >
+                {i18n.FOOTER.LEGAL.TOS}
               </a>
             </li>
             <li>
@@ -96,20 +108,22 @@ import Logo from "./Logo.astro"
                 href="#"
                 class="hover:underline hover:text-primary duration-300"
               >
-                Cookies
+                {i18n.FOOTER.LEGAL.COOKIES}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-sm font-semibold uppercase text-white">WEB MAP</h2>
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.WEB_MAP.TITLE}
+          </h2>
           <ul class="flex flex-col gap-2 font-medium text-gray-400">
             <li>
               <a
                 href="#"
                 class="hover:underline hover:text-primary duration-300"
               >
-                Home
+                {i18n.FOOTER.WEB_MAP.HOME}
               </a>
             </li>
             <li>
@@ -117,7 +131,7 @@ import Logo from "./Logo.astro"
                 href="#"
                 class="hover:underline hover:text-primary duration-300"
               >
-                Info
+                {i18n.FOOTER.WEB_MAP.INFO}
               </a>
             </li>
             <li>
@@ -125,13 +139,15 @@ import Logo from "./Logo.astro"
                 href=""
                 class="hover:underline hover:text-primary duration-300"
               >
-                Archivo
+                {i18n.FOOTER.WEB_MAP.ARCHIVE}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="mb-0 text-sm font-semibold uppercase text-white">PRODUCIDO POR:</h2>
+          <h2 class="mb-0 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.PRODUCED_BY.TITLE}
+          </h2>
           <a
             class="hover:opacity-100 shadow hover:shadow-lg opacity-70 transition-opacity duration-300 block"
             href="#"
@@ -146,7 +162,7 @@ import Logo from "./Logo.astro"
     <hr class="my-6 border-white/10 sm:mx-auto lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm text-gray-400 sm:text-center"
-        >&copy; Clone ESLAND 2021 -&nbsp;{new Date().getFullYear()}&nbsp; -Todos los derechos reservados. MAM 
+        >&copy; Clone ESLAND 2021 -&nbsp;{new Date().getFullYear()}&nbsp; - {i18n.FOOTER.DISCLAIMER} 
       </span>
       <div class="mt-4 flex sm:mt-0 sm:justify-center">
         <a

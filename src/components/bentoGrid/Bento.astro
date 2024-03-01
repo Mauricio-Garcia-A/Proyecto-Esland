@@ -1,5 +1,9 @@
 ---
 import BentoItem from "./BentiItem.astro";
+
+import {getI18N} from '../../i18n/'
+const { currentLocale } = Astro
+const i18n = getI18N({currentLocale})
 ---
 
 <section
@@ -7,8 +11,8 @@ import BentoItem from "./BentiItem.astro";
     grid grid-cols-10 auto-rows-[35rem] gap-4"
 >
   <BentoItem
-    class="col-span-10 md:col-span-6 "
-    title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
+    class="col-span-10 uppercase md:col-span-6 "
+    title={i18n.BENTOGRID.BENTO_TITLE_1}
   >
     <div
       class="absolute left-0 top-0 bottom-0 h-full w-full
@@ -18,18 +22,13 @@ import BentoItem from "./BentiItem.astro";
       slot="image"
     >
     </div>
-    <p slot="content" class="max-w-xl pt-4">
-      España, Latinoamérica y Andorra unidas por creadores, creadoras y sus
-      comunidades, para recordar y revivir <strong
-        >algunos de los mejores momentos del año</strong
-      >.
-    </p>
+    <p slot="content" class="max-w-xl pt-4" set:html={i18n.BENTOGRID.BENTO_CONTENT_1} />
   </BentoItem>
   
   <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="LA GALA"
-    subtitle="17 de febrero de 2024"
+    class="col-span-10 uppercase md:col-span-4"
+    title={i18n.BENTOGRID.BENTO_TITLE_3}
+    subtitle={i18n.BENTOGRID.BENTO_SUBTITLE_3}
   >
     <div
       class="absolute left-0 top-0 bottom-0 h-full w-full
@@ -39,17 +38,12 @@ import BentoItem from "./BentiItem.astro";
       slot="image"
     >
     </div>
-    <p slot="content" class="max-w-xl pt-4">
-      España, Latinoamérica y Andorra unidas por creadores, creadoras y sus
-      comunidades, para recordar y revivir <strong
-        >algunos de los mejores momentos del año</strong
-      >.
-    </p>
+    <p slot="content" class="max-w-xl pt-4" set:html={i18n.BENTOGRID.BENTO_CONTENT_3} />
   </BentoItem>
   <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="LA ALFOMBRA BLANCA"
-    subtitle="16 de febrero de 2024"
+    class="col-span-10 uppercase md:col-span-4"
+    title={i18n.BENTOGRID.BENTO_TITLE_2}
+    subtitle={i18n.BENTOGRID.BENTO_SUBTITLE_2}
   >
     <div
       class="absolute left-0 top-0 bottom-0 h-full w-full
@@ -59,16 +53,11 @@ import BentoItem from "./BentiItem.astro";
       slot="image"
     >
     </div>
-    <p slot="content" class="max-w-xl pt-4">
-      España, Latinoamérica y Andorra unidas por creadores, creadoras y sus
-      comunidades, para recordar y revivir <strong
-        >algunos de los mejores momentos del año</strong
-      >.
-    </p>
+    <p slot="content" class="max-w-xl pt-4" set:html={i18n.BENTOGRID.BENTO_CONTENT_2} />
   </BentoItem>
   <BentoItem
-    class="col-span-10 md:col-span-6"
-    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+    class="col-span-10 uppercase md:col-span-6"
+    title={i18n.BENTOGRID.BENTO_TITLE_4}
   >
     <div
       class="absolute left-0 top-0 bottom-0 h-full w-full
@@ -78,11 +67,6 @@ import BentoItem from "./BentiItem.astro";
       slot="image"
     >
     </div>
-    <p slot="content" class="max-w-xl pt-4">
-      España, Latinoamérica y Andorra unidas por creadores, creadoras y sus
-      comunidades, para recordar y revivir <strong
-        >algunos de los mejores momentos del año</strong
-      >.
-    </p>
+    <p slot="content" class="max-w-xl pt-4" set:html={i18n.BENTOGRID.BENTO_CONTENT_4} />
   </BentoItem>
 </section>

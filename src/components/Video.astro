@@ -1,5 +1,9 @@
 ---
 import Logo from "./Logo.astro";
+
+import {getI18N} from '../i18n/'
+const { currentLocale } = Astro
+const i18n = getI18N({currentLocale})
 ---
 
 <div class="w-full relative">
@@ -26,14 +30,14 @@ import Logo from "./Logo.astro";
       <p
         class="subtitle md:text-xl lg:text-2xl text-center text-wrap font-jura px-4"
       >
-        Premios a la Comunidad Hispanohablante de Streaming
+        {i18n.VIDEO.VIDEO_SUBTITLE}
       </p>
     </section>
   
   <a
     class="lg:text-2xl md:px-5 md:text-xl text-xs w-fit font-medium no-underline px-3 py-3 border border-solid border-white rounded-full uppercase
     hover:bg-black/70 hover:cursor-pointer"
-    >CONSIGUE TU ESTRADA</a
+    >{i18n.VIDEO.VIDEO_BUTTON}</a
   >
 </div>
   <video
