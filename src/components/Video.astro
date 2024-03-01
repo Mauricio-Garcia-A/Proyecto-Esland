@@ -1,23 +1,52 @@
-<div class="w-full relative">
-  <img 
-    class=" absolute z-10 top-10 left-0 right-10 m-auto w-[800px] animate-fade animate-once animate-duration-[3000ms]"
-    src="/logo-home.svg"
-    alt="ESLAND"
-  />
-  <video 
-    class="w-full h-screen object-cover object-top animate-fade animate-once animate-duration-1000" 
-    src="/video.mp4" 
-    autoplay 
-    loop 
-    muted 
-    style="clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);"
+---
+import Logo from "./Logo.astro";
+---
 
-  />
-  <video 
-    class="absolute blur-3xl w-full -bottom-48 -z-40 animate-fade animate-once animate-duration-1000" 
-    src="/video.mp4" 
-    autoplay 
-    loop 
-    muted 
-  />
+<div class="w-full relative">
+  <div
+    class="absolute inset-0 h-full justify-center z-10 m-auto flex flex-col items-center w-full gap-20"
+  >
+    <section
+      class="relative z-10 animate-fade-up flex justify-center items-center gap-8 flex-col"
+    >
+      <h1
+        class="flex items-center gap-8 text-4xl md:gap-14 md:text-6xl lg:gap-20 lg:text-8xl "
+      >
+        <span>E</span>
+        <span>S</span>
+        <span>L</span>
+        <Logo
+          class="h-[2rem] w-auto md:h-[3rem] lg:h-20 scale-150"
+          aria-label="A"
+        />
+        <span>N</span>
+        <span>D</span>
+      </h1>
+
+      <p
+        class="subtitle md:text-xl lg:text-2xl text-center text-wrap font-jura px-4"
+      >
+        Premios a la Comunidad Hispanohablante de Streaming
+      </p>
+    </section>
+  
+  <a
+    class="lg:text-2xl md:px-5 md:text-xl text-xs w-fit font-medium no-underline px-3 py-3 border border-solid border-white rounded-full uppercase
+    hover:bg-black/70 hover:cursor-pointer"
+    >CONSIGUE TU ESTRADA</a
+  >
+</div>
+  <video
+    class="w-full h-screen object-cover object-top animate-fade animate-once animate-duration-1000"
+    src="/video.mp4"
+    autoplay
+    loop
+    muted
+    style="clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);"></video>
+  <video
+    class="absolute blur-3xl w-full -bottom-48 -z-40 animate-fade animate-once animate-duration-1000"
+    src="/video.mp4"
+    autoplay
+    loop
+    muted></video>
 </div>

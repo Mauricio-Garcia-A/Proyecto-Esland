@@ -7,7 +7,7 @@ const i18n = getI18N({currentLocale})
 ---
 
 <section
-  class="text-xl text-left px-20 max-w-[60ch] text-pretty mx-auto my-24 flex flex-col items-center"
+  class="text-xl text-left  max-w-[60ch] text-pretty md:mx-auto my-24 flex flex-col items-center mx-10"
 >
   <Logo class="w-16 mb-10" />
   <h1
@@ -15,7 +15,7 @@ const i18n = getI18N({currentLocale})
   >
     {i18n.INTRO_TITLE}<br/>{i18n.INTRO_TITLE_AFTER_BR}
   </h1>
-  <p set:html={i18n.INTRO_DESCRIPTION_1}/>
+  <p set:html={i18n.INTRO_DESCRIPTION_1} />
   <p set:html={i18n.INTRO_DESCRIPTION_2}/>
   <p set:html={i18n.INTRO_DESCRIPTION_3}/>
 </section>
