@@ -26,6 +26,11 @@ npx astro add tailwind
 ```sh
  npm i @justinribeiro/lite-youtube
 ```
+- PREACT: (Libreria alternativa + liviana que React, ideal para este caso para cargar componente de Animacion contador Numeros)
+```sh
+ npx astro add preact
+```
+
 
 ## 🚀 Estructura del Proyecto
 

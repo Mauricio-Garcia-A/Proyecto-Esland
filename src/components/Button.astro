@@ -1,0 +1,18 @@
+--- 
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<a
+  class=" relative lg:te xt-2xl md:px-8 md:text-xl text-xs w-fit font-medium no-underline px-6 py-3 border border-solid border-white rounded-full uppercase
+          hover:bg-black/40 hover:cursor-pointer
+            hover:shadow-[0_0px_15px_rgba(255,_255,_255,_0.7)]
+            transition-all duration-300 ease
+            hover:[text-shadow:0_0px_15px_rgba(255,_255,_255,_0.95)]
+        "
+>
+  {title}
+</a>
