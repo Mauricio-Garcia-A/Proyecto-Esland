@@ -16,9 +16,12 @@ const i18n = getI18N({currentLocale})
   <HeroContainer 
     image="/background-archivo.webp"
   >
-    <h1  class="flex items-center  text-2xl md:text-4xl  lg:text-6xl "
+    <h1  class=" animate-fade-down flex items-center  text-2xl md:text-4xl  lg:text-6xl "
     > EDICIONES ANTERIORES </h1>
-    <Button title="REVIVE LA ÚLTIMA GALA" />
+    <div class="animate-fade-up">
+      <Button title="REVIVE LA ÚLTIMA GALA" />
+    </div>
+    
   </HeroContainer>
   <main>
     <Numeros />
