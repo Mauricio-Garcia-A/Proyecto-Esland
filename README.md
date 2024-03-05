@@ -30,7 +30,10 @@ npx astro add tailwind
 ```sh
  npx astro add preact
 ```
-
+- PhotoSwipe: Galeria de fotos
+```sh
+ npm i photoswipe --save
+```
 
 ## 🚀 Estructura del Proyecto
 

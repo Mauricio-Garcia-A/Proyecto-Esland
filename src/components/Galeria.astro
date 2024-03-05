@@ -1,0 +1,62 @@
+---
+import "photoswipe/style.css";
+
+const ArrayImage = Array.from({ length: 15 }, (_, i) => ({
+  url: `gallery/img-${i + 1}.webp`,
+  thumb: `gallery/thumbnails/img-${i + 1}.webp`,
+  width: i == 3 || i == 6 || i == 11 ? "767px" : "1152px",
+  height: i == 3 || i == 6 || i == 11 ? "1152px" : "767px",
+}));
+---
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
+</script>
+
+<section class="py-20 px-10">
+  <h2
+  class=" text-5xl md:text-6xl text-balance text-center  mx-auto tracking-wide"
+>
+GALERÍA
+</h2>
+<p class="text-center text-2xl py-10">
+  Algunos de los mejores momentos de la gala que pasarán a la historia.
+</p>
+  <div
+    id="gallery"
+    class="columns-1 md:columns-2 lg:columns-3 gap-4 max-w-[1400px] mx-auto"
+  >
+    {
+      ArrayImage.map((Image, i) => (
+        <div
+          class="
+          rounded-xl shadow-xl shadow-sky-300/10 hover:shadow-blue-300/20
+          hover:scale-105
+          scale-100
+          border border-black/10
+          transition-all
+          overflow-hidden
+          object-cover
+          mb-5
+         "
+        >
+          <a
+            href={Image.url}
+            data-pswp-width={Image.width}
+            data-pswp-height={Image.height}
+            target="_blank"
+          >
+            <img class="object-cover" src={Image.thumb} alt="" />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
